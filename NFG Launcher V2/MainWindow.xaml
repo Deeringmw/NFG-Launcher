@@ -39,7 +39,7 @@
                     </DataTemplate>
                 </TabItem.HeaderTemplate>
                 <Grid>
-                    <TextBlock Text=""/>
+
                 </Grid>
             </TabItem>
             <TabItem Header="Albums" Style="{StaticResource MenuItemHeader}">
@@ -58,7 +58,14 @@
                         </DockPanel>
                     </DataTemplate>
                 </TabItem.HeaderTemplate>
-
+                <Grid>
+                    <ListBox x:Name="lstAddonsExile" HorizontalAlignment="Left" Height="341" Margin="0,28,0,0" VerticalAlignment="Top" Width="272" Background="#FF252525" BorderBrush="#FF9C5703" BorderThickness="2" SelectionMode="Multiple"/>
+                    <Button x:Name="btnInstallExile"  HorizontalAlignment="Right" Margin="0,374,383,0" VerticalAlignment="Top" Width="272" FontFamily="Stencil" FontSize="14.667" Background="#FFCD900C" Foreground="#FF252525" BorderBrush="#FF252525" Height="47" Click="button_Click">
+                        <Button.Content>
+                            <TextBlock Text="Install Selected"/>
+                        </Button.Content>
+                    </Button>
+                </Grid>
             </TabItem>
             <TabItem x:Name ="tabInsurgency" Header="Insurgency" Style="{StaticResource MenuItemHeader}">
                 <TabItem.HeaderTemplate>
@@ -76,7 +83,7 @@
                         </DockPanel>
                     </DataTemplate>
                 </TabItem.HeaderTemplate>
-                <Grid x:Name="grdModInsurgency">
+                <Grid x:Name="grdModInsurgency" Margin="-9,0,9,0">
                     <TextBlock FontSize="16" FontFamily="Stencil" Margin="0,0,383,635">Used mods for [NFG] Insurgency</TextBlock>
                     <ListBox x:Name="lstAddonsInsurgency" HorizontalAlignment="Left" Height="341" Margin="0,28,0,0" VerticalAlignment="Top" Width="272" Background="#FF252525" BorderBrush="#FF9C5703" BorderThickness="2" SelectionMode="Multiple"/>
                     <Button x:Name="button"  HorizontalAlignment="Right" Margin="0,374,383,0" VerticalAlignment="Top" Width="272" FontFamily="Stencil" FontSize="14.667" Background="#FFCD900C" Foreground="#FF252525" BorderBrush="#FF252525" Height="47" Click="button_Click">
@@ -84,7 +91,7 @@
                             <TextBlock Text="Install Selected"/>
                         </Button.Content>
                     </Button>
-                    <Grid x:Name="voicealert" Margin="0,0,0,-9" Visibility="Hidden">
+                    <Grid x:Name="voicealert" Margin="0,0,0,-9">
                         <Grid.Background>
                             <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                                 <GradientStop Color="#FF512603" Offset="1"/>

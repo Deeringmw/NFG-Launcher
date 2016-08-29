@@ -24,7 +24,7 @@ namespace NFG_Launcher_V2
         public MainWindow()
         {
 
-            
+
 
             InitializeComponent();
             ListBoxItem itm1 = new ListBoxItem();
@@ -32,70 +32,59 @@ namespace NFG_Launcher_V2
 
             lstAddonsInsurgency.Items.Add(itm1);
 
-      //      InitializeComponent();
-      //      ListBoxItem itm2 = new ListBoxItem();
-      //      itm2.Content = "@U100";
+            //      InitializeComponent();
+            //      ListBoxItem itm2 = new ListBoxItem();
+            //      itm2.Content = "@U100";
 
-      //      lstAddonsInsurgency.Items.Add(itm2);
+            //      lstAddonsInsurgency.Items.Add(itm2);
 
-            InitializeComponent();
             ListBoxItem itm3 = new ListBoxItem();
             itm3.Content = "Kunduz, Afghanistan";
             lstAddonsInsurgency.Items.Add(itm3);
-            
-            InitializeComponent();
+
             ListBoxItem itm4 = new ListBoxItem();
             itm4.Content = "CUP Terrains- Maps 1.2.0";
             lstAddonsInsurgency.Items.Add(itm4);
 
-            InitializeComponent();
             ListBoxItem itm5 = new ListBoxItem();
             itm5.Content = "CUP Terrains- Core 1.2.0";
             lstAddonsInsurgency.Items.Add(itm5);
 
-            InitializeComponent();
             ListBoxItem itm6 = new ListBoxItem();
             itm6.Content = "MRT Acessory Functions";
             lstAddonsInsurgency.Items.Add(itm6);
 
-            InitializeComponent();
             ListBoxItem itm7 = new ListBoxItem();
             itm7.Content = "FHQ Accessories Pack";
             lstAddonsInsurgency.Items.Add(itm7);
 
-            InitializeComponent();
             ListBoxItem itm8 = new ListBoxItem();
             itm8.Content = "FHQ Options";
             lstAddonsInsurgency.Items.Add(itm8);
 
-            InitializeComponent();
             ListBoxItem itm9 = new ListBoxItem();
             itm9.Content = "NIArsenal";
             lstAddonsInsurgency.Items.Add(itm9);
 
-            InitializeComponent();
             ListBoxItem itm10 = new ListBoxItem();
             itm10.Content = "CBA 3.0";
             lstAddonsInsurgency.Items.Add(itm10);
 
-            InitializeComponent();
             ListBoxItem itm11 = new ListBoxItem();
             itm11.Content = "BlastCore: Phoenix";
             lstAddonsInsurgency.Items.Add(itm11);
 
-            InitializeComponent();
             ListBoxItem itm12 = new ListBoxItem();
             itm12.Content = "JSRS3: DragonFyre EDEN 1.2";
             lstAddonsInsurgency.Items.Add(itm12);
 
-            InitializeComponent();
             ListBoxItem itm13 = new ListBoxItem();
             itm13.Content = "EricJ Weapons Pack";
             lstAddonsInsurgency.Items.Add(itm13);
 
-            
+            //Exile test below this point//
         }
-        
+
 
         private void btnAgree_Click(object sender, RoutedEventArgs e)
         {
@@ -118,7 +107,7 @@ namespace NFG_Launcher_V2
         {
             foreach (Object obj in lstAddonsInsurgency.SelectedItems)
             {
-                
+
             }
         }
     }
