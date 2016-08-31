@@ -75,7 +75,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Compile Include="Addons.cs" />
+    <Compile Include="AddonsPvp.cs" />
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
@@ -130,6 +130,9 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Images\NFGGaming5_zpsb6nf6crj.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\NFGlogo.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

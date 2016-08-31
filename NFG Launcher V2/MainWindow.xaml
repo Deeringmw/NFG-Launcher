@@ -6,7 +6,7 @@
         xmlns:Controls="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
         xmlns:local="clr-namespace:NFG_Launcher_V2"
         mc:Ignorable="d"
-        Title="MainWindow" Height="720" Width="900">
+        Title="NFG Server Browser" Height="720" Width="900" Icon="/Images\NFGlogo.png">
     <Controls:MetroWindow.Resources>
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
@@ -58,9 +58,17 @@
                         </DockPanel>
                     </DataTemplate>
                 </TabItem.HeaderTemplate>
-                <Grid>
-                    <ListBox x:Name="lstAddonsExile" HorizontalAlignment="Left" Height="341" Margin="0,28,0,0" VerticalAlignment="Top" Width="272" Background="#FF252525" BorderBrush="#FF9C5703" BorderThickness="2" SelectionMode="Multiple"/>
-                    <Button x:Name="btnInstallExile"  HorizontalAlignment="Right" Margin="0,374,383,0" VerticalAlignment="Top" Width="272" FontFamily="Stencil" FontSize="14.667" Background="#FFCD900C" Foreground="#FF252525" BorderBrush="#FF252525" Height="47" Click="button_Click">
+                <Grid Margin="21,0,0,0">
+                    <ListBox x:Name="lstAddonsPvp" HorizontalAlignment="Left" Height="341" Margin="0,28,0,0" VerticalAlignment="Top" Width="272" Background="#FF252525" BorderBrush="#FF9C5703" BorderThickness="2" SelectionMode="Multiple" ItemsSource="{Binding}">
+                        <ListBox.ItemTemplate>
+                            <DataTemplate>
+                                <Grid Margin="4">
+                                    <TextBlock Text="{Binding ModName}" FontWeight="Bold"  />
+                                </Grid>
+                            </DataTemplate>
+                        </ListBox.ItemTemplate>
+                    </ListBox>
+                    <Button x:Name="btnInstallPvp"  HorizontalAlignment="Right" Margin="0,374,362,0" VerticalAlignment="Top" Width="272" FontFamily="Stencil" FontSize="14.667" Background="#FFCD900C" Foreground="#FF252525" BorderBrush="#FF252525" Height="47" Click="btnInstallPvp_Click">
                         <Button.Content>
                             <TextBlock Text="Install Selected"/>
                         </Button.Content>
@@ -83,10 +91,18 @@
                         </DockPanel>
                     </DataTemplate>
                 </TabItem.HeaderTemplate>
-                <Grid x:Name="grdModInsurgency" Margin="-9,0,9,0">
+                <Grid x:Name="grdModInsurgency" Margin="14,0,9,0">
                     <TextBlock FontSize="16" FontFamily="Stencil" Margin="0,0,383,635">Used mods for [NFG] Insurgency</TextBlock>
-                    <ListBox x:Name="lstAddonsInsurgency" HorizontalAlignment="Left" Height="341" Margin="0,28,0,0" VerticalAlignment="Top" Width="272" Background="#FF252525" BorderBrush="#FF9C5703" BorderThickness="2" SelectionMode="Multiple"/>
-                    <Button x:Name="button"  HorizontalAlignment="Right" Margin="0,374,383,0" VerticalAlignment="Top" Width="272" FontFamily="Stencil" FontSize="14.667" Background="#FFCD900C" Foreground="#FF252525" BorderBrush="#FF252525" Height="47" Click="button_Click">
+                    <ListBox x:Name="lstAddonsInsurgency" HorizontalAlignment="Left" Height="341" Margin="10,28,0,0" VerticalAlignment="Top" Width="272" Background="#FF252525" BorderBrush="#FF9C5703" BorderThickness="2" SelectionMode="Multiple"  ItemsSource="{Binding}">
+                        <ListBox.ItemTemplate>
+                            <DataTemplate>
+                                <Grid Margin="4">
+                                    <TextBlock Text="{Binding ModName}" FontWeight="Bold"  />
+                                </Grid>
+                            </DataTemplate>
+                        </ListBox.ItemTemplate>
+                    </ListBox>
+                    <Button x:Name="btnInstallInsurgency"  HorizontalAlignment="Right" Margin="0,374,350,0" VerticalAlignment="Top" Width="272" FontFamily="Stencil" FontSize="14.667" Background="#FFCD900C" Foreground="#FF252525" BorderBrush="#FF252525" Height="47" Click="btnInstallInsurgency_Click">
                         <Button.Content>
                             <TextBlock Text="Install Selected"/>
                         </Button.Content>
