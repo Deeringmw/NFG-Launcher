@@ -26,13 +26,32 @@ namespace NFG_Launcher_V2
 
             InitializeComponent();
 
+            #region Exile Mods
+
+            var addonlistPvp = new List<Addons>();
+
+            var exile = new Addons
+            {
+                IsRequired = true,
+                LocalDirectory = @"",
+                Url = "",
+                ModName = "Exile 1.2",
+            };
+            addonlistPvp.Add(exile);
+
+
+
+
+            lstAddonsPvp.ItemsSource = addonlistPvp;
+            #endregion
+
             #region Insurgency Mods
 
 
-            var addonList = new List<AddonsPvp>();
+            var addonlistInsurgency = new List<Addons>();
 
 
-            var tryk = new AddonsPvp
+            var tryk = new Addons
             {
                 IsRequired = true,
                 LocalDirectory = @"",
@@ -40,9 +59,9 @@ namespace NFG_Launcher_V2
                 ModName = "TRYK's Multi-Play Unifroms Pack"
             };
 
-            addonList.Add(tryk);
+            addonlistInsurgency.Add(tryk);
 
-            var Kunduz = new AddonsPvp
+            var Kunduz = new Addons
             {
                 IsRequired = false,
                 LocalDirectory = @"doesnt matter yet",
@@ -50,9 +69,9 @@ namespace NFG_Launcher_V2
                 ModName = "Kunduz, Afghanistan"
             };
 
-            addonList.Add(Kunduz);
+            addonlistInsurgency.Add(Kunduz);
 
-            var cupTerrain = new AddonsPvp
+            var cupTerrain = new Addons
             {
                 IsRequired = false,
                 LocalDirectory = @"doesnt matter yet",
@@ -60,9 +79,9 @@ namespace NFG_Launcher_V2
                 ModName = "CUP Terrains- Maps 1.2.0"
             };
 
-            addonList.Add(cupTerrain);
+            addonlistInsurgency.Add(cupTerrain);
 
-            var cupCore = new AddonsPvp
+            var cupCore = new Addons
             {
                 IsRequired = false,
                 LocalDirectory = @"doesnt matter yet",
@@ -70,9 +89,9 @@ namespace NFG_Launcher_V2
                 ModName = "CUP Terrains- Core 1.2.0"
             };
 
-            addonList.Add(cupCore);
+            addonlistInsurgency.Add(cupCore);
 
-            var mrtAcc = new AddonsPvp
+            var mrtAcc = new Addons
             {
                 IsRequired = false,
                 LocalDirectory = @"doesnt matter yet",
@@ -80,9 +99,9 @@ namespace NFG_Launcher_V2
                 ModName = "MRT Acessory Functions"
             };
 
-            addonList.Add(mrtAcc);
+            addonlistInsurgency.Add(mrtAcc);
 
-            var fhqAcc = new AddonsPvp
+            var fhqAcc = new Addons
             {
                 IsRequired = false,
                 LocalDirectory = @"doesnt matter yet",
@@ -90,9 +109,9 @@ namespace NFG_Launcher_V2
                 ModName = "FHQ Accessories Pack"
             };
 
-            addonList.Add(fhqAcc);
+            addonlistInsurgency.Add(fhqAcc);
 
-            var fhqWep = new AddonsPvp
+            var fhqWep = new Addons
             {
                 IsRequired = false,
                 LocalDirectory = @"doesnt matter yet",
@@ -100,9 +119,9 @@ namespace NFG_Launcher_V2
                 ModName = "FHQ_Weapons"
             };
 
-            addonList.Add(fhqWep);
+            addonlistInsurgency.Add(fhqWep);
 
-            var niArsenal = new AddonsPvp
+            var niArsenal = new Addons
             {
                 IsRequired = false,
                 LocalDirectory = @"doesnt matter yet",
@@ -110,9 +129,9 @@ namespace NFG_Launcher_V2
                 ModName = "NIArsenal"
             };
 
-            addonList.Add(niArsenal);
+            addonlistInsurgency.Add(niArsenal);
 
-            var cba = new AddonsPvp
+            var cba = new Addons
             {
                 IsRequired = false,
                 LocalDirectory = @"doesnt matter yet",
@@ -120,9 +139,9 @@ namespace NFG_Launcher_V2
                 ModName = "CBA 3.0"
             };
 
-            addonList.Add(cba);
+            addonlistInsurgency.Add(cba);
 
-            var blCore = new AddonsPvp
+            var blCore = new Addons
             {
                 IsRequired = false,
                 LocalDirectory = @"doesnt matter yet",
@@ -130,9 +149,9 @@ namespace NFG_Launcher_V2
                 ModName = "BlastCore: Phoenix"
             };
 
-            addonList.Add(blCore);
+            addonlistInsurgency.Add(blCore);
 
-            var jsrs = new AddonsPvp
+            var jsrs = new Addons
             {
                 IsRequired = false,
                 LocalDirectory = @"doesnt matter yet",
@@ -140,9 +159,9 @@ namespace NFG_Launcher_V2
                 ModName = "JSRS3: DragonFyre EDEN 1.2"
             };
 
-            addonList.Add(jsrs);
+            addonlistInsurgency.Add(jsrs);
 
-            var ericJ = new AddonsPvp
+            var ericJ = new Addons
             {
                 IsRequired = false,
                 LocalDirectory = @"doesnt matter yet",
@@ -150,14 +169,14 @@ namespace NFG_Launcher_V2
                 ModName = "EricJ Weapons Pack"
             };
 
-            addonList.Add(ericJ);
+            addonlistInsurgency.Add(ericJ);
 
            
 
 
             // ...
 
-            lstAddonsInsurgency.ItemsSource = addonList;
+            lstAddonsInsurgency.ItemsSource = addonlistInsurgency;
 
             #endregion
 
@@ -187,9 +206,9 @@ namespace NFG_Launcher_V2
         {
             foreach (object obj in lstAddonsPvp.SelectedItems)
             {
-                var theAddon = obj as AddonsPvp;
+                var theAddon = obj as Addons;
                 MessageBox.Show(theAddon.ModName);
-                System.Diagnostics.Process.Start(theAddon.Url);
+                //System.Diagnostics.Process.Start(theAddon.Url);
             }
         }
 
@@ -197,9 +216,9 @@ namespace NFG_Launcher_V2
         {
             foreach (object obj in lstAddonsInsurgency.SelectedItems)
             {
-                var theAddon = obj as AddonsPvp;
+                var theAddon = obj as Addons;
                 MessageBox.Show(theAddon.ModName);
-                System.Diagnostics.Process.Start(theAddon.Url);
+            ///    System.Diagnostics.Process.Start(theAddon.Url);
             }
         }
 

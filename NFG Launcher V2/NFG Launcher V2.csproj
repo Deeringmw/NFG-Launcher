@@ -75,7 +75,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Compile Include="AddonsPvp.cs" />
+    <Compile Include="Addons.cs" />
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
@@ -129,7 +129,7 @@
     <Resource Include="Resources\Entypo-license.txt" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Images\NFGGaming5_zpsb6nf6crj.png" />
+    <SplashScreen Include="Images\NFGGaming5_zpsb6nf6crj.png" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Images\NFGlogo.png" />

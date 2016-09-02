@@ -6,7 +6,7 @@
         xmlns:Controls="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
         xmlns:local="clr-namespace:NFG_Launcher_V2"
         mc:Ignorable="d"
-        Title="NFG Server Browser" Height="720" Width="900" Icon="/Images\NFGlogo.png">
+        Title="NFG Server Browser" Height="720" Width="900" Icon="/Images\NFGlogo.png" ResizeMode="NoResize">
     <Controls:MetroWindow.Resources>
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
