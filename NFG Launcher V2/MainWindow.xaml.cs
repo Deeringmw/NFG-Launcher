@@ -1,17 +1,8 @@
-﻿using System;
+﻿using System.IO;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Net;
 using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
+using System.Windows.Forms;
 using MahApps.Metro.Controls;
 
 namespace NFG_Launcher_V2
@@ -21,10 +12,16 @@ namespace NFG_Launcher_V2
     /// </summary>
     public partial class MainWindow : MetroWindow
     {
+
+        private Settings _settings;
+
         public MainWindow()
         {
 
             InitializeComponent();
+
+            _settings = new Settings();
+            
 
             #region Exile Mods
 
@@ -33,7 +30,6 @@ namespace NFG_Launcher_V2
             var exile = new Addons
             {
                 IsRequired = true,
-                LocalDirectory = @"",
                 Url = "",
                 ModName = "Exile 1.2",
             };
@@ -54,7 +50,6 @@ namespace NFG_Launcher_V2
             var tryk = new Addons
             {
                 IsRequired = true,
-                LocalDirectory = @"",
                 Url = "",
                 ModName = "TRYK's Multi-Play Unifroms Pack"
             };
@@ -64,7 +59,6 @@ namespace NFG_Launcher_V2
             var Kunduz = new Addons
             {
                 IsRequired = false,
-                LocalDirectory = @"doesnt matter yet",
                 Url = "",
                 ModName = "Kunduz, Afghanistan"
             };
@@ -74,7 +68,6 @@ namespace NFG_Launcher_V2
             var cupTerrain = new Addons
             {
                 IsRequired = false,
-                LocalDirectory = @"doesnt matter yet",
                 Url = "",
                 ModName = "CUP Terrains- Maps 1.2.0"
             };
@@ -84,7 +77,6 @@ namespace NFG_Launcher_V2
             var cupCore = new Addons
             {
                 IsRequired = false,
-                LocalDirectory = @"doesnt matter yet",
                 Url = "",
                 ModName = "CUP Terrains- Core 1.2.0"
             };
@@ -94,7 +86,6 @@ namespace NFG_Launcher_V2
             var mrtAcc = new Addons
             {
                 IsRequired = false,
-                LocalDirectory = @"doesnt matter yet",
                 Url = "",
                 ModName = "MRT Acessory Functions"
             };
@@ -104,7 +95,6 @@ namespace NFG_Launcher_V2
             var fhqAcc = new Addons
             {
                 IsRequired = false,
-                LocalDirectory = @"doesnt matter yet",
                 Url = "",
                 ModName = "FHQ Accessories Pack"
             };
@@ -114,7 +104,6 @@ namespace NFG_Launcher_V2
             var fhqWep = new Addons
             {
                 IsRequired = false,
-                LocalDirectory = @"doesnt matter yet",
                 Url = "",
                 ModName = "FHQ_Weapons"
             };
@@ -124,7 +113,6 @@ namespace NFG_Launcher_V2
             var niArsenal = new Addons
             {
                 IsRequired = false,
-                LocalDirectory = @"doesnt matter yet",
                 Url = "",
                 ModName = "NIArsenal"
             };
@@ -134,7 +122,6 @@ namespace NFG_Launcher_V2
             var cba = new Addons
             {
                 IsRequired = false,
-                LocalDirectory = @"doesnt matter yet",
                 Url = "",
                 ModName = "CBA 3.0"
             };
@@ -144,9 +131,10 @@ namespace NFG_Launcher_V2
             var blCore = new Addons
             {
                 IsRequired = false,
-                LocalDirectory = @"doesnt matter yet",
-                Url = "",
-                ModName = "BlastCore: Phoenix"
+                Url = "http://149.56.47.26/Insurgencymods/Bc.zip",
+                ModName = "BlastCore: Phoenix",
+                FileName = "Bc.zip"
+                
             };
 
             addonlistInsurgency.Add(blCore);
@@ -154,7 +142,6 @@ namespace NFG_Launcher_V2
             var jsrs = new Addons
             {
                 IsRequired = false,
-                LocalDirectory = @"doesnt matter yet",
                 Url = "",
                 ModName = "JSRS3: DragonFyre EDEN 1.2"
             };
@@ -164,14 +151,13 @@ namespace NFG_Launcher_V2
             var ericJ = new Addons
             {
                 IsRequired = false,
-                LocalDirectory = @"doesnt matter yet",
                 Url = "",
                 ModName = "EricJ Weapons Pack"
             };
 
             addonlistInsurgency.Add(ericJ);
 
-           
+
 
 
             // ...
@@ -179,11 +165,25 @@ namespace NFG_Launcher_V2
             lstAddonsInsurgency.ItemsSource = addonlistInsurgency;
 
             #endregion
-
+            var localD = new Settings
+            {
+                LocalDirectory = txtPath.Text,
+            };
 
         }
 
         #region Click Handlers
+
+        private void btnPath_Click(object sender, RoutedEventArgs e)
+        {
+            FolderBrowserDialog path = new FolderBrowserDialog();
+            DialogResult result = path.ShowDialog();
+
+            if (string.IsNullOrWhiteSpace(path.SelectedPath)) return;
+
+            txtPath.Text = path.SelectedPath;
+            _settings.LocalDirectory = path.SelectedPath;
+        }
 
         private void btnAgree_Click(object sender, RoutedEventArgs e)
         {
@@ -204,24 +204,32 @@ namespace NFG_Launcher_V2
 
         public void btnInstallPvp_Click(object sender, RoutedEventArgs e)
         {
-            foreach (object obj in lstAddonsPvp.SelectedItems)
+            foreach (var obj in lstAddonsPvp.SelectedItems)
             {
                 var theAddon = obj as Addons;
-                MessageBox.Show(theAddon.ModName);
-                //System.Diagnostics.Process.Start(theAddon.Url);
+                System.Windows.Forms.MessageBox.Show(theAddon.ModName);
+         //       WebClient Client = new WebClient();
+        //       Client.DownloadFile(theAddon.Url, theAddon.LocalDirectory);
             }
         }
 
         private void btnInstallInsurgency_Click(object sender, RoutedEventArgs e)
         {
-            foreach (object obj in lstAddonsInsurgency.SelectedItems)
+            foreach (var obj in lstAddonsInsurgency.SelectedItems)
             {
                 var theAddon = obj as Addons;
-                MessageBox.Show(theAddon.ModName);
-            ///    System.Diagnostics.Process.Start(theAddon.Url);
+                System.Windows.Forms.MessageBox.Show("Now Downloading" + theAddon?.ModName);
+                using (var client = new WebClient())
+                {
+                    client.DownloadFile(theAddon.Url, $@"{_settings.LocalDirectory}\{theAddon.FileName}");
+                }
+
+
             }
         }
 
         #endregion
+
+
     }
 }

@@ -143,6 +143,28 @@
                     </Grid>
                 </Grid>
             </TabItem>
+            <TabItem Style="{StaticResource MenuItemHeader}">
+                <TabItem.HeaderTemplate>
+                    <DataTemplate>
+                        <DockPanel LastChildFill="True">
+                            <Rectangle DockPanel.Dock="Left" Width="20" Height="20" Fill="{Binding RelativeSource={RelativeSource AncestorType={x:Type ContentPresenter}}, Path=(TextElement.Foreground)}" >
+                                <Rectangle.OpacityMask>
+                                    <VisualBrush Stretch="Fill" Visual="{StaticResource appbar_cog}" />
+                                </Rectangle.OpacityMask>
+                            </Rectangle>
+                            <Label  Padding="10,0,0,0"
+                                    Foreground="{Binding RelativeSource={RelativeSource AncestorType={x:Type ContentPresenter}}, Path=(TextElement.Foreground)}"
+                                    FontSize="{Binding RelativeSource={RelativeSource AncestorType={x:Type ContentPresenter}}, Path=(TextElement.FontSize)}"
+                                    Content="Settings"/>
+                        </DockPanel>
+                    </DataTemplate>
+                </TabItem.HeaderTemplate>
+                <Grid>
+                    <TextBox x:Name="txtPath" HorizontalAlignment="Left" Height="28" Margin="10,38,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="288"/>
+                    <Button x:Name="btnPath" Content="Button" HorizontalAlignment="Left" Margin="324,41,0,0" VerticalAlignment="Top" Width="76" Click="btnPath_Click"/>
+
+                </Grid>
+            </TabItem>
         </TabControl>
     </Grid>
 </Controls:MetroWindow>

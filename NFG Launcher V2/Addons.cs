@@ -10,8 +10,11 @@ namespace NFG_Launcher_V2
     {
         public bool IsRequired { get; set; }
         public string Url { get; set; }
-        public string LocalDirectory { get; set; }
+       // public string LocalDirectory { get; set; }
         public string ModName { get; set; }
+        public string FileName { get; set; }
+
+
     }
 
 
