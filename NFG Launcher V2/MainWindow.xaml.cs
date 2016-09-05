@@ -31,7 +31,7 @@ namespace NFG_Launcher_V2
             {
                 IsRequired = true,
                 Url = "",
-                ModName = "Exile 1.2",
+                ModName = "Exile 1.0.1",
             };
             addonlistPvp.Add(exile);
 

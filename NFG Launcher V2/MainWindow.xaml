@@ -21,6 +21,9 @@
         </ResourceDictionary>
     </Controls:MetroWindow.Resources>
     <Grid>
+        <Grid.Background>
+            <ImageBrush ImageSource="Images/background.jpg" Stretch="UniformToFill"/>
+        </Grid.Background>
         <TabControl TabStripPlacement="Left" Grid.Column="0" HorizontalAlignment="Center" Margin="0,10" Width="892">
             <TabItem Style="{StaticResource MenuItemHeader}">
                 <TabItem.HeaderTemplate>
@@ -92,6 +95,9 @@
                     </DataTemplate>
                 </TabItem.HeaderTemplate>
                 <Grid x:Name="grdModInsurgency" Margin="14,0,9,0">
+                    <Grid.Background>
+                        <ImageBrush/>
+                    </Grid.Background>
                     <TextBlock FontSize="16" FontFamily="Stencil" Margin="0,0,383,635">Used mods for [NFG] Insurgency</TextBlock>
                     <ListBox x:Name="lstAddonsInsurgency" HorizontalAlignment="Left" Height="341" Margin="10,28,0,0" VerticalAlignment="Top" Width="272" Background="#FF252525" BorderBrush="#FF9C5703" BorderThickness="2" SelectionMode="Multiple"  ItemsSource="{Binding}">
                         <ListBox.ItemTemplate>
@@ -109,10 +115,7 @@
                     </Button>
                     <Grid x:Name="voicealert" Margin="0,0,0,-9">
                         <Grid.Background>
-                            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                                <GradientStop Color="#FF512603" Offset="1"/>
-                                <GradientStop Color="#FFFF7401" Offset="0.328"/>
-                            </LinearGradientBrush>
+                            <ImageBrush ImageSource="Images/background.jpg" Stretch="UniformToFill"/>
                         </Grid.Background>
                         <TextBlock x:Name="textBlock" HorizontalAlignment="Left" Margin="65,205,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="271" Width="504" FontSize="21.333" FontFamily="Stencil"><Run Text="THE USE OF THE OFFICIAL [NFG] INSURGENCY SERVER ReQUIRES THE USE OF TEAMSPEAK AT ALL TIMES! THIS IS TO PREVENT FRIENDLY FIRE AND COMPLICATIONS. FAILURE tO USE TEAMSPEAK CAN RESULT IN A BAN FROM THE SERVER!"/><LineBreak/><Run/><LineBreak/><Run Text="TS INFO: ts.nofucksgivin.com"/></TextBlock>
                         <Button x:Name="btnTsDownload" Content="Download Teamspeak Here" HorizontalAlignment="Left" Margin="65,476,0,0" VerticalAlignment="Top" Width="228" Height="62" Foreground="White" BorderBrush="#25252525" Click="btnTsDownload_Click">
