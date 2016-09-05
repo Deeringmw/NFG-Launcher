@@ -211,7 +211,7 @@ namespace NFG_Launcher_V2
             foreach (var obj in lstAddonsPvp.SelectedItems)
             {
                 var theAddon = obj as Addons;
-                System.Windows.Forms.MessageBox.Show(theAddon.ModName);
+                    MessageBox.Show(theAddon.ModName);
                 //       WebClient Client = new WebClient();
                 //       Client.DownloadFile(theAddon.Url, theAddon.LocalDirectory);
             }
@@ -223,7 +223,7 @@ namespace NFG_Launcher_V2
                 try
                 {
                     var theAddon = obj as Addons;
-                    System.Windows.Forms.MessageBox.Show("Now Downloading" + theAddon?.ModName);
+                    System.Windows.Forms.MessageBox.Show("Now Downloading " + theAddon?.ModName);
                     using (var client = new WebClient())
                     {
                         client.DownloadFile(theAddon.Url, $@"{_settings.LocalDirectory}\{theAddon.FileName}");
@@ -235,9 +235,9 @@ namespace NFG_Launcher_V2
                 }
 
         }
-    
 
-#endregion
+
+        #endregion
 
 
     }
