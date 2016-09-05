@@ -1,9 +1,11 @@
-﻿using System.IO;
+﻿using System;
+using System.IO;
 using System.Collections.Generic;
 using System.Net;
 using System.Windows;
 using System.Windows.Forms;
 using MahApps.Metro.Controls;
+using MessageBox = System.Windows.MessageBox;
 
 namespace NFG_Launcher_V2
 {
@@ -21,7 +23,7 @@ namespace NFG_Launcher_V2
             InitializeComponent();
 
             _settings = new Settings();
-            
+
 
             #region Exile Mods
 
@@ -39,6 +41,7 @@ namespace NFG_Launcher_V2
 
 
             lstAddonsPvp.ItemsSource = addonlistPvp;
+
             #endregion
 
             #region Insurgency Mods
@@ -134,7 +137,7 @@ namespace NFG_Launcher_V2
                 Url = "http://149.56.47.26/Insurgencymods/Bc.zip",
                 ModName = "BlastCore: Phoenix",
                 FileName = "Bc.zip"
-                
+
             };
 
             addonlistInsurgency.Add(blCore);
@@ -165,6 +168,7 @@ namespace NFG_Launcher_V2
             lstAddonsInsurgency.ItemsSource = addonlistInsurgency;
 
             #endregion
+
             var localD = new Settings
             {
                 LocalDirectory = txtPath.Text,
@@ -208,27 +212,32 @@ namespace NFG_Launcher_V2
             {
                 var theAddon = obj as Addons;
                 System.Windows.Forms.MessageBox.Show(theAddon.ModName);
-         //       WebClient Client = new WebClient();
-        //       Client.DownloadFile(theAddon.Url, theAddon.LocalDirectory);
+                //       WebClient Client = new WebClient();
+                //       Client.DownloadFile(theAddon.Url, theAddon.LocalDirectory);
             }
         }
 
         private void btnInstallInsurgency_Click(object sender, RoutedEventArgs e)
         {
             foreach (var obj in lstAddonsInsurgency.SelectedItems)
-            {
-                var theAddon = obj as Addons;
-                System.Windows.Forms.MessageBox.Show("Now Downloading" + theAddon?.ModName);
-                using (var client = new WebClient())
+                try
                 {
-                    client.DownloadFile(theAddon.Url, $@"{_settings.LocalDirectory}\{theAddon.FileName}");
+                    var theAddon = obj as Addons;
+                    System.Windows.Forms.MessageBox.Show("Now Downloading" + theAddon?.ModName);
+                    using (var client = new WebClient())
+                    {
+                        client.DownloadFile(theAddon.Url, $@"{_settings.LocalDirectory}\{theAddon.FileName}");
+                    }
+                }
+                catch (Exception)
+                {
+                    MessageBox.Show("Please select FilePath from settings menu.");
                 }
 
-
-            }
         }
+    
 
-        #endregion
+#endregion
 
 
     }

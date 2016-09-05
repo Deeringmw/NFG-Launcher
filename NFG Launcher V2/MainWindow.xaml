@@ -120,19 +120,19 @@
                         <TextBlock x:Name="textBlock" HorizontalAlignment="Left" Margin="65,205,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="271" Width="504" FontSize="21.333" FontFamily="Stencil"><Run Text="THE USE OF THE OFFICIAL [NFG] INSURGENCY SERVER ReQUIRES THE USE OF TEAMSPEAK AT ALL TIMES! THIS IS TO PREVENT FRIENDLY FIRE AND COMPLICATIONS. FAILURE tO USE TEAMSPEAK CAN RESULT IN A BAN FROM THE SERVER!"/><LineBreak/><Run/><LineBreak/><Run Text="TS INFO: ts.nofucksgivin.com"/></TextBlock>
                         <Button x:Name="btnTsDownload" Content="Download Teamspeak Here" HorizontalAlignment="Left" Margin="65,476,0,0" VerticalAlignment="Top" Width="228" Height="62" Foreground="White" BorderBrush="#25252525" Click="btnTsDownload_Click">
                             <Button.Background>
-                                <RadialGradientBrush>
-                                    <GradientStop Color="#FF1C590B" Offset="1"/>
-                                    <GradientStop Color="#FF04800F" Offset="0.365"/>
-                                </RadialGradientBrush>
+                                <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
+                                    <GradientStop Color="#FFC97B09" Offset="0.793"/>
+                                    <GradientStop Color="#FF0AD60A" Offset="1"/>
+                                </LinearGradientBrush>
                             </Button.Background>
                         </Button>
                         <Image Source="/Images\NFGGaming5_zpsb6nf6crj.png" Height="250" Margin="-10,-12,10,434"/>
                         <Button x:Name="btnTsCancel" Content="Back" HorizontalAlignment="Left" Margin="370,476,0,0" VerticalAlignment="Top" Width="199" Height="62" Foreground="White" BorderBrush="#25252525" Click="btnTsCancel_Click">
                             <Button.Background>
-                                <RadialGradientBrush>
-                                    <GradientStop Color="#FF9B0000" Offset="0.244"/>
-                                    <GradientStop Color="#FF7E0C0C" Offset="0.86"/>
-                                </RadialGradientBrush>
+                                <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
+                                    <GradientStop Color="#FFC10909" Offset="1"/>
+                                    <GradientStop Color="#FFC97B09" Offset="0.759"/>
+                                </LinearGradientBrush>
                             </Button.Background>
                         </Button>
                         <Button x:Name="btnAgree" Content="I have read and agree to be in teamspeak while playing on [nfg] insurgency" HorizontalAlignment="Left" Margin="65,574,0,0" VerticalAlignment="Top" Width="504" Height="67" Foreground="White" Click="btnAgree_Click">
