@@ -6,6 +6,9 @@ using System.Windows;
 using System.Windows.Forms;
 using MahApps.Metro.Controls;
 using MessageBox = System.Windows.MessageBox;
+using System.Windows.Controls;
+using PortableSteam;
+using Steam.Query;
 
 namespace NFG_Launcher_V2
 {
@@ -14,231 +17,47 @@ namespace NFG_Launcher_V2
     /// </summary>
     public partial class MainWindow : MetroWindow
     {
-
-        private Settings _settings;
+        private Server _server;
 
         public MainWindow()
         {
-
             InitializeComponent();
-
-            _settings = new Settings();
-
-
-            #region Exile Mods
-
-            var addonlistPvp = new List<Addons>();
-
-            var exile = new Addons
-            {
-                IsRequired = true,
-                Url = "",
-                ModName = "Exile 1.0.1",
-            };
-            addonlistPvp.Add(exile);
-
-
-
-
-            lstAddonsPvp.ItemsSource = addonlistPvp;
-
-            #endregion
-
-            #region Insurgency Mods
-
-
-            var addonlistInsurgency = new List<Addons>();
-
-
-            var tryk = new Addons
-            {
-                IsRequired = true,
-                Url = "",
-                ModName = "TRYK's Multi-Play Unifroms Pack"
-            };
-
-            addonlistInsurgency.Add(tryk);
-
-            var Kunduz = new Addons
-            {
-                IsRequired = false,
-                Url = "",
-                ModName = "Kunduz, Afghanistan"
-            };
-
-            addonlistInsurgency.Add(Kunduz);
-
-            var cupTerrain = new Addons
-            {
-                IsRequired = false,
-                Url = "",
-                ModName = "CUP Terrains- Maps 1.2.0"
-            };
-
-            addonlistInsurgency.Add(cupTerrain);
-
-            var cupCore = new Addons
-            {
-                IsRequired = false,
-                Url = "",
-                ModName = "CUP Terrains- Core 1.2.0"
-            };
-
-            addonlistInsurgency.Add(cupCore);
-
-            var mrtAcc = new Addons
-            {
-                IsRequired = false,
-                Url = "",
-                ModName = "MRT Acessory Functions"
-            };
-
-            addonlistInsurgency.Add(mrtAcc);
-
-            var fhqAcc = new Addons
-            {
-                IsRequired = false,
-                Url = "",
-                ModName = "FHQ Accessories Pack"
-            };
-
-            addonlistInsurgency.Add(fhqAcc);
-
-            var fhqWep = new Addons
-            {
-                IsRequired = false,
-                Url = "",
-                ModName = "FHQ_Weapons"
-            };
-
-            addonlistInsurgency.Add(fhqWep);
-
-            var niArsenal = new Addons
-            {
-                IsRequired = false,
-                Url = "",
-                ModName = "NIArsenal"
-            };
-
-            addonlistInsurgency.Add(niArsenal);
-
-            var cba = new Addons
-            {
-                IsRequired = false,
-                Url = "",
-                ModName = "CBA 3.0"
-            };
-
-            addonlistInsurgency.Add(cba);
-
-            var blCore = new Addons
-            {
-                IsRequired = false,
-                Url = "http://149.56.47.26/Insurgencymods/Bc.zip",
-                ModName = "BlastCore: Phoenix",
-                FileName = "Bc.zip"
-
-            };
-
-            addonlistInsurgency.Add(blCore);
-
-            var jsrs = new Addons
-            {
-                IsRequired = false,
-                Url = "",
-                ModName = "JSRS3: DragonFyre EDEN 1.2"
-            };
-
-            addonlistInsurgency.Add(jsrs);
-
-            var ericJ = new Addons
-            {
-                IsRequired = false,
-                Url = "",
-                ModName = "EricJ Weapons Pack"
-            };
-
-            addonlistInsurgency.Add(ericJ);
-
-
-
-
-            // ...
-
-            lstAddonsInsurgency.ItemsSource = addonlistInsurgency;
-
-            #endregion
-
-            var localD = new Settings
-            {
-                LocalDirectory = txtPath.Text,
-            };
+            SteamWebAPI.SetGlobalKey("CD544189422768FDC60B06DEC2627CC7");
+            _server = new Server(new IPEndPoint(IPAddress.Parse("108.61.135.218"), 26901));
 
         }
 
-        #region Click Handlers
 
-        private void btnPath_Click(object sender, RoutedEventArgs e)
+
+
+
+
+        private void btnPlay_Click(object sender, RoutedEventArgs e)
         {
-            FolderBrowserDialog path = new FolderBrowserDialog();
-            DialogResult result = path.ShowDialog();
-
-            if (string.IsNullOrWhiteSpace(path.SelectedPath)) return;
-
-            txtPath.Text = path.SelectedPath;
-            _settings.LocalDirectory = path.SelectedPath;
+            System.Diagnostics.Process.Start("steam://connect/72.185.188.0:28015");
         }
 
-        private void btnAgree_Click(object sender, RoutedEventArgs e)
+        private void btnGrandpaDonate_Click(object sender, RoutedEventArgs e)
         {
-            voicealert.Visibility = Visibility.Hidden;
+            System.Diagnostics.Process.Start("http://oursecrets.enjin.com/donors/m/39182051/article/3886685");
         }
 
-        private void btnTsDownload_Click(object sender, RoutedEventArgs e)
+        private async void btnPlayGrandpa_Click(object sender, RoutedEventArgs e)
         {
-            System.Diagnostics.Process.Start("https://www.teamspeak.com/downloads");
+            var serverInfo = await _server.GetServerInfo();
+            MessageBox.Show(serverInfo.Players.ToString());
+
+            //System.Diagnostics.Process.Start("steam://connect/108.61.135.218:26901");
         }
 
-        private void btnTsCancel_Click(object sender, RoutedEventArgs e)
+        private void btnPlayGrandmas_Click(object sender, RoutedEventArgs e)
         {
-            tabInsurgency.Visibility = Visibility.Hidden;
-            voicealert.Visibility = Visibility.Hidden;
-            grdModInsurgency.Visibility = Visibility.Hidden;
+            System.Diagnostics.Process.Start("steam://connect/108.61.135.218:24901");
         }
 
-        public void btnInstallPvp_Click(object sender, RoutedEventArgs e)
+        private void btnPlayDirty_Click(object sender, RoutedEventArgs e)
         {
-            foreach (var obj in lstAddonsPvp.SelectedItems)
-            {
-                var theAddon = obj as Addons;
-                    MessageBox.Show(theAddon.ModName);
-                //       WebClient Client = new WebClient();
-                //       Client.DownloadFile(theAddon.Url, theAddon.LocalDirectory);
-            }
+            System.Diagnostics.Process.Start("steam://connect/108.61.135.218:29901");
         }
-
-        private void btnInstallInsurgency_Click(object sender, RoutedEventArgs e)
-        {
-            foreach (var obj in lstAddonsInsurgency.SelectedItems)
-                try
-                {
-                    var theAddon = obj as Addons;
-                    System.Windows.Forms.MessageBox.Show("Now Downloading " + theAddon?.ModName);
-                    using (var client = new WebClient())
-                    {
-                        client.DownloadFile(theAddon.Url, $@"{_settings.LocalDirectory}\{theAddon.FileName}");
-                    }
-                }
-                catch (Exception)
-                {
-                    MessageBox.Show("Please select FilePath from settings menu.");
-                }
-
-        }
-
-
-        #endregion
-
-
     }
 }

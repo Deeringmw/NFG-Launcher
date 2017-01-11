@@ -1,0 +1,22 @@
+C:\Users\Mdeering\documents\visual studio 2015\Projects\NFG Launcher V2\NFG Launcher V2\bin\Release\NFG Launcher V2.exe.config
+C:\Users\Mdeering\documents\visual studio 2015\Projects\NFG Launcher V2\NFG Launcher V2\bin\Release\NFG Launcher V2.exe
+C:\Users\Mdeering\documents\visual studio 2015\Projects\NFG Launcher V2\NFG Launcher V2\bin\Release\NFG Launcher V2.pdb
+C:\Users\Mdeering\documents\visual studio 2015\Projects\NFG Launcher V2\NFG Launcher V2\bin\Release\MahApps.Metro.dll
+C:\Users\Mdeering\documents\visual studio 2015\Projects\NFG Launcher V2\NFG Launcher V2\bin\Release\System.Windows.Interactivity.dll
+C:\Users\Mdeering\documents\visual studio 2015\Projects\NFG Launcher V2\NFG Launcher V2\bin\Release\TentacleSoftware.TeamSpeakQuery.dll
+C:\Users\Mdeering\documents\visual studio 2015\Projects\NFG Launcher V2\NFG Launcher V2\bin\Release\TentacleSoftware.Telnet.dll
+C:\Users\Mdeering\documents\visual studio 2015\Projects\NFG Launcher V2\NFG Launcher V2\bin\Release\MahApps.Metro.pdb
+C:\Users\Mdeering\documents\visual studio 2015\Projects\NFG Launcher V2\NFG Launcher V2\bin\Release\MahApps.Metro.xml
+C:\Users\Mdeering\documents\visual studio 2015\Projects\NFG Launcher V2\NFG Launcher V2\obj\Release\Resources\Icons.baml
+C:\Users\Mdeering\documents\visual studio 2015\Projects\NFG Launcher V2\NFG Launcher V2\obj\Release\Resources\IconsNonShared.baml
+C:\Users\Mdeering\documents\visual studio 2015\Projects\NFG Launcher V2\NFG Launcher V2\obj\Release\MainWindow.g.cs
+C:\Users\Mdeering\documents\visual studio 2015\Projects\NFG Launcher V2\NFG Launcher V2\obj\Release\App.g.cs
+C:\Users\Mdeering\documents\visual studio 2015\Projects\NFG Launcher V2\NFG Launcher V2\obj\Release\NFG Launcher V2_MarkupCompile.cache
+C:\Users\Mdeering\documents\visual studio 2015\Projects\NFG Launcher V2\NFG Launcher V2\obj\Release\NFG Launcher V2_MarkupCompile.lref
+C:\Users\Mdeering\documents\visual studio 2015\Projects\NFG Launcher V2\NFG Launcher V2\obj\Release\App.baml
+C:\Users\Mdeering\documents\visual studio 2015\Projects\NFG Launcher V2\NFG Launcher V2\obj\Release\MainWindow.baml
+C:\Users\Mdeering\documents\visual studio 2015\Projects\NFG Launcher V2\NFG Launcher V2\obj\Release\NFG Launcher V2.g.resources
+C:\Users\Mdeering\documents\visual studio 2015\Projects\NFG Launcher V2\NFG Launcher V2\obj\Release\NFG_Launcher_V2.Properties.Resources.resources
+C:\Users\Mdeering\documents\visual studio 2015\Projects\NFG Launcher V2\NFG Launcher V2\obj\Release\NFG Launcher V2.csproj.GenerateResource.Cache
+C:\Users\Mdeering\documents\visual studio 2015\Projects\NFG Launcher V2\NFG Launcher V2\obj\Release\NFG Launcher V2.exe
+C:\Users\Mdeering\documents\visual studio 2015\Projects\NFG Launcher V2\NFG Launcher V2\obj\Release\NFG Launcher V2.pdb

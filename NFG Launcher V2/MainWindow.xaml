@@ -6,24 +6,48 @@
         xmlns:Controls="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
         xmlns:local="clr-namespace:NFG_Launcher_V2"
         mc:Ignorable="d"
-        Title="NFG Server Browser" Height="720" Width="900" Icon="/Images\NFGlogo.png" ResizeMode="NoResize">
+        Title="OurSecrets Server Browser" Height="720" Width="900" Icon="/Images\Bite1.png" ResizeMode="NoResize">
+
     <Controls:MetroWindow.Resources>
+
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
-                <ResourceDictionary Source="/Resources/Icons.xaml" />
                 <ResourceDictionary>
                     <Style x:Key="MenuItemHeader" BasedOn="{StaticResource MetroTabItem}" TargetType="{x:Type TabItem}">
                         <Setter Property="Controls:ControlsHelper.HeaderFontSize" Value="24"></Setter>
                         <Setter Property="Padding" Value="0,10,0,10"/>
                     </Style>
+
                 </ResourceDictionary>
+                <ResourceDictionary Source="/Resources/Icons.xaml" />
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
     </Controls:MetroWindow.Resources>
+    <Controls:MetroWindow.RightWindowCommands>
+        <Controls:WindowCommands>
+            <Button Content="settings" />
+            <Button Name="btnHelp">
+                <StackPanel Orientation="Horizontal">
+                    <Rectangle Width="20"
+                   Height="20"
+                   Fill="{Binding RelativeSource={RelativeSource AncestorType=Button}, Path=Foreground}">
+                        <Rectangle.OpacityMask>
+                            <VisualBrush Stretch="Fill" Visual="{StaticResource appbar_question}" />
+                        </Rectangle.OpacityMask>
+                    </Rectangle>
+                    <TextBlock Margin="4 0 0 0"
+                   VerticalAlignment="Center"
+                   Text="Help" />
+                </StackPanel>
+            </Button>
+        </Controls:WindowCommands>
+    </Controls:MetroWindow.RightWindowCommands>
+
     <Grid>
         <Grid.Background>
             <ImageBrush ImageSource="Images/background.jpg" Stretch="UniformToFill"/>
         </Grid.Background>
+        <TextBlock Name="tbProgressUpdate" Foreground="White"  Margin="10,632,692,10" />
         <TabControl TabStripPlacement="Left" Grid.Column="0" HorizontalAlignment="Center" Margin="0,10" Width="892">
             <TabItem Style="{StaticResource MenuItemHeader}">
                 <TabItem.HeaderTemplate>
@@ -31,17 +55,20 @@
                         <DockPanel LastChildFill="True">
                             <Rectangle DockPanel.Dock="Left" Width="20" Height="20" Fill="{Binding RelativeSource={RelativeSource AncestorType={x:Type ContentPresenter}}, Path=(TextElement.Foreground)}" >
                                 <Rectangle.OpacityMask>
-                                    <VisualBrush Stretch="Fill" Visual="{StaticResource appbar_radar}" />
+                                    <VisualBrush Stretch="Fill" Visual="{StaticResource appbar_chess_king}" />
                                 </Rectangle.OpacityMask>
                             </Rectangle>
                             <Label  Padding="10,0,0,0"
                                     Foreground="{Binding RelativeSource={RelativeSource AncestorType={x:Type ContentPresenter}}, Path=(TextElement.Foreground)}"
                                     FontSize="{Binding RelativeSource={RelativeSource AncestorType={x:Type ContentPresenter}}, Path=(TextElement.FontSize)}"
-                                    Content="NFG PVE Exile Altis"/>
+                                    Content="Grandpas Secret"/>
                         </DockPanel>
                     </DataTemplate>
                 </TabItem.HeaderTemplate>
-                <Grid>
+                <Grid Margin="-4,0,4,0">
+                    <Button x:Name="btnGrandpaDonate" Content="Grandpa's Donators" HorizontalAlignment="Left" Margin="125,550,0,0" VerticalAlignment="Top" Width="161" Height="62" Click="btnGrandpaDonate_Click"/>
+                    <TextBlock x:Name="textBlock1" HorizontalAlignment="Left" Margin="10,454,0,0" TextWrapping="Wrap" Text="DONORS Get: 2 Base Teleports, 2 Base Protections, 2 Waypoint's  Of  Their Very Own. One Can Be Shared With Friends &amp; The Other Can Only Be Used By The Donor, They Also Get To Travel As Far As 20,000 Anywhere On The Map &amp; Also Get 15 Gimmes. " VerticalAlignment="Top" Height="80" FontSize="14" FontFamily="Georgia"/>
+                    <Button x:Name="btnPlayGrandpa" Content="Play Now!" HorizontalAlignment="Left" Margin="452,550,0,0" VerticalAlignment="Top" Width="152" Click="btnPlayGrandpa_Click" Height="62"/>
 
                 </Grid>
             </TabItem>
@@ -51,31 +78,20 @@
                         <DockPanel LastChildFill="True">
                             <Rectangle DockPanel.Dock="Left" Width="20" Height="20" Fill="{Binding RelativeSource={RelativeSource AncestorType={x:Type ContentPresenter}}, Path=(TextElement.Foreground)}" >
                                 <Rectangle.OpacityMask>
-                                    <VisualBrush Stretch="Fill" Visual="{StaticResource appbar_chevron_down}" />
+                                    <VisualBrush Stretch="Fill" Visual="{StaticResource appbar_chess_queen}" />
                                 </Rectangle.OpacityMask>
                             </Rectangle>
                             <Label  Padding="10,0,0,0"
                                     Foreground="{Binding RelativeSource={RelativeSource AncestorType={x:Type ContentPresenter}}, Path=(TextElement.Foreground)}"
                                     FontSize="{Binding RelativeSource={RelativeSource AncestorType={x:Type ContentPresenter}}, Path=(TextElement.FontSize)}"
-                                    Content="NFG PVP"/>
+                                    Content="Grandmas Secret"/>
                         </DockPanel>
                     </DataTemplate>
                 </TabItem.HeaderTemplate>
-                <Grid Margin="21,0,0,0">
-                    <ListBox x:Name="lstAddonsPvp" HorizontalAlignment="Left" Height="341" Margin="0,28,0,0" VerticalAlignment="Top" Width="272" Background="#FF252525" BorderBrush="#FF9C5703" BorderThickness="2" SelectionMode="Multiple" ItemsSource="{Binding}">
-                        <ListBox.ItemTemplate>
-                            <DataTemplate>
-                                <Grid Margin="4">
-                                    <TextBlock Text="{Binding ModName}" FontWeight="Bold"  />
-                                </Grid>
-                            </DataTemplate>
-                        </ListBox.ItemTemplate>
-                    </ListBox>
-                    <Button x:Name="btnInstallPvp"  HorizontalAlignment="Right" Margin="0,374,362,0" VerticalAlignment="Top" Width="272" FontFamily="Stencil" FontSize="14.667" Background="#FFCD900C" Foreground="#FF252525" BorderBrush="#FF252525" Height="47" Click="btnInstallPvp_Click">
-                        <Button.Content>
-                            <TextBlock Text="Install Selected"/>
-                        </Button.Content>
-                    </Button>
+                <Grid Margin="-4,0,4,0">
+                      <Button x:Name="btnGrandmaDonators" Content="Grandpa's Donators" HorizontalAlignment="Left" Margin="125,550,0,0" VerticalAlignment="Top" Width="161" Height="62" Click="btnGrandpaDonate_Click"/>
+                    <TextBlock x:Name="textBlock2" HorizontalAlignment="Left" Margin="10,454,0,0" TextWrapping="Wrap" Text="DONORS Get: 2 Base Teleports, 2 Base Protections, 2 Waypoint's  Of  Their Very Own. One Can Be Shared With Friends &amp; The Other Can Only Be Used By The Donor, They Also Get To Travel As Far As 20,000 Anywhere On The Map &amp; Also Get 15 Gimmes. " VerticalAlignment="Top" Height="80" FontSize="14" FontFamily="Georgia"/>
+                    <Button x:Name="btnPlayGrandma" Content="Play Now!" HorizontalAlignment="Left" Margin="452,550,0,0" VerticalAlignment="Top" Width="152" Click="btnPlayGrandmas_Click" Height="62"/>
                 </Grid>
             </TabItem>
             <TabItem x:Name ="tabInsurgency" Header="Insurgency" Style="{StaticResource MenuItemHeader}">
@@ -84,88 +100,21 @@
                         <DockPanel LastChildFill="True">
                             <Rectangle DockPanel.Dock="Left" Width="20" Height="20" Fill="{Binding RelativeSource={RelativeSource AncestorType={x:Type ContentPresenter}}, Path=(TextElement.Foreground)}" >
                                 <Rectangle.OpacityMask>
-                                    <VisualBrush Stretch="Fill" Visual="{StaticResource appbar_microphone_google}" />
+                                    <VisualBrush Stretch="Fill" Visual="{StaticResource appbar_rocket}" />
                                 </Rectangle.OpacityMask>
                             </Rectangle>
                             <Label  Padding="10,0,0,0"
                                     Foreground="{Binding RelativeSource={RelativeSource AncestorType={x:Type ContentPresenter}}, Path=(TextElement.Foreground)}"
                                     FontSize="{Binding RelativeSource={RelativeSource AncestorType={x:Type ContentPresenter}}, Path=(TextElement.FontSize)}"
-                                    Content="NFG Insurgency"/>
+                                    Content="Dirty Secrets"/>
                         </DockPanel>
                     </DataTemplate>
                 </TabItem.HeaderTemplate>
-                <Grid x:Name="grdModInsurgency" Margin="14,0,9,0">
-                    <Grid.Background>
-                        <ImageBrush/>
-                    </Grid.Background>
-                    <TextBlock FontSize="16" FontFamily="Stencil" Margin="0,0,383,635">Used mods for [NFG] Insurgency</TextBlock>
-                    <ListBox x:Name="lstAddonsInsurgency" HorizontalAlignment="Left" Height="341" Margin="10,28,0,0" VerticalAlignment="Top" Width="272" Background="#FF252525" BorderBrush="#FF9C5703" BorderThickness="2" SelectionMode="Multiple"  ItemsSource="{Binding}">
-                        <ListBox.ItemTemplate>
-                            <DataTemplate>
-                                <Grid Margin="4">
-                                    <TextBlock Text="{Binding ModName}" FontWeight="Bold"  />
-                                </Grid>
-                            </DataTemplate>
-                        </ListBox.ItemTemplate>
-                    </ListBox>
-                    <Button x:Name="btnInstallInsurgency"  HorizontalAlignment="Right" Margin="0,374,350,0" VerticalAlignment="Top" Width="272" FontFamily="Stencil" FontSize="14.667" Background="#FFCD900C" Foreground="#FF252525" BorderBrush="#FF252525" Height="47" Click="btnInstallInsurgency_Click">
-                        <Button.Content>
-                            <TextBlock Text="Install Selected"/>
-                        </Button.Content>
-                    </Button>
-                    <Grid x:Name="voicealert" Margin="0,0,0,-9">
-                        <Grid.Background>
-                            <ImageBrush ImageSource="Images/background.jpg" Stretch="UniformToFill"/>
-                        </Grid.Background>
-                        <TextBlock x:Name="textBlock" HorizontalAlignment="Left" Margin="65,205,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="271" Width="504" FontSize="21.333" FontFamily="Stencil"><Run Text="THE USE OF THE OFFICIAL [NFG] INSURGENCY SERVER ReQUIRES THE USE OF TEAMSPEAK AT ALL TIMES! THIS IS TO PREVENT FRIENDLY FIRE AND COMPLICATIONS. FAILURE tO USE TEAMSPEAK CAN RESULT IN A BAN FROM THE SERVER!"/><LineBreak/><Run/><LineBreak/><Run Text="TS INFO: ts.nofucksgivin.com"/></TextBlock>
-                        <Button x:Name="btnTsDownload" Content="Download Teamspeak Here" HorizontalAlignment="Left" Margin="65,476,0,0" VerticalAlignment="Top" Width="228" Height="62" Foreground="White" BorderBrush="#25252525" Click="btnTsDownload_Click">
-                            <Button.Background>
-                                <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
-                                    <GradientStop Color="#FFC97B09" Offset="0.793"/>
-                                    <GradientStop Color="#FF0AD60A" Offset="1"/>
-                                </LinearGradientBrush>
-                            </Button.Background>
-                        </Button>
-                        <Image Source="/Images\NFGGaming5_zpsb6nf6crj.png" Height="250" Margin="-10,-12,10,434"/>
-                        <Button x:Name="btnTsCancel" Content="Back" HorizontalAlignment="Left" Margin="370,476,0,0" VerticalAlignment="Top" Width="199" Height="62" Foreground="White" BorderBrush="#25252525" Click="btnTsCancel_Click">
-                            <Button.Background>
-                                <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
-                                    <GradientStop Color="#FFC10909" Offset="1"/>
-                                    <GradientStop Color="#FFC97B09" Offset="0.759"/>
-                                </LinearGradientBrush>
-                            </Button.Background>
-                        </Button>
-                        <Button x:Name="btnAgree" Content="I have read and agree to be in teamspeak while playing on [nfg] insurgency" HorizontalAlignment="Left" Margin="65,574,0,0" VerticalAlignment="Top" Width="504" Height="67" Foreground="White" Click="btnAgree_Click">
-                            <Button.Background>
-                                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                                    <GradientStop Color="#FFF9980B" Offset="0"/>
-                                    <GradientStop Color="#FF341F02" Offset="1"/>
-                                </LinearGradientBrush>
-                            </Button.Background>
-                        </Button>
-                    </Grid>
-                </Grid>
-            </TabItem>
-            <TabItem Style="{StaticResource MenuItemHeader}">
-                <TabItem.HeaderTemplate>
-                    <DataTemplate>
-                        <DockPanel LastChildFill="True">
-                            <Rectangle DockPanel.Dock="Left" Width="20" Height="20" Fill="{Binding RelativeSource={RelativeSource AncestorType={x:Type ContentPresenter}}, Path=(TextElement.Foreground)}" >
-                                <Rectangle.OpacityMask>
-                                    <VisualBrush Stretch="Fill" Visual="{StaticResource appbar_cog}" />
-                                </Rectangle.OpacityMask>
-                            </Rectangle>
-                            <Label  Padding="10,0,0,0"
-                                    Foreground="{Binding RelativeSource={RelativeSource AncestorType={x:Type ContentPresenter}}, Path=(TextElement.Foreground)}"
-                                    FontSize="{Binding RelativeSource={RelativeSource AncestorType={x:Type ContentPresenter}}, Path=(TextElement.FontSize)}"
-                                    Content="Settings"/>
-                        </DockPanel>
-                    </DataTemplate>
-                </TabItem.HeaderTemplate>
-                <Grid>
-                    <TextBox x:Name="txtPath" HorizontalAlignment="Left" Height="28" Margin="10,38,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="288"/>
-                    <Button x:Name="btnPath" Content="Button" HorizontalAlignment="Left" Margin="324,41,0,0" VerticalAlignment="Top" Width="76" Click="btnPath_Click"/>
 
+                <Grid Margin="-4,0,4,0">
+                    <Button x:Name="btnDirtyDonetors" Content="Grandpa's Donators" HorizontalAlignment="Left" Margin="125,550,0,0" VerticalAlignment="Top" Width="161" Height="62" Click="btnGrandpaDonate_Click"/>
+                    <TextBlock x:Name="textBlock3" HorizontalAlignment="Left" Margin="10,454,0,0" TextWrapping="Wrap" Text="DONORS Get: 2 Base Teleports, 2 Base Protections, 2 Waypoint's  Of  Their Very Own. One Can Be Shared With Friends &amp; The Other Can Only Be Used By The Donor, They Also Get To Travel As Far As 20,000 Anywhere On The Map &amp; Also Get 15 Gimmes. " VerticalAlignment="Top" Height="80" FontSize="14" FontFamily="Georgia"/>
+                    <Button x:Name="btnPlayDirty" Content="Play Now!" HorizontalAlignment="Left" Margin="452,550,0,0" VerticalAlignment="Top" Width="152" Click="btnPlayDirty_Click" Height="62"/>
                 </Grid>
             </TabItem>
         </TabControl>
