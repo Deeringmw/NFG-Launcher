@@ -54,3 +54,36 @@ C:\Users\stick\Documents\Visual Studio 2015\Projects\NFG Launcher V2\NFG Launche
 C:\Users\stick\Documents\Visual Studio 2015\Projects\NFG Launcher V2\NFG Launcher V2\obj\Debug\NFG Launcher V2.pdb
 C:\Users\stick\Documents\Visual Studio 2015\Projects\NFG Launcher V2\NFG Launcher V2\bin\Debug\Steam.Query.dll
 C:\Users\stick\Documents\Visual Studio 2015\Projects\NFG Launcher V2\NFG Launcher V2\obj\Debug\NFG Launcher V2.csprojResolveAssemblyReference.cache
+C:\Users\Wayne\Desktop\projects\NFG-Launcher\NFG Launcher V2\bin\Debug\NFG Launcher V2.exe.config
+C:\Users\Wayne\Desktop\projects\NFG-Launcher\NFG Launcher V2\obj\Debug\NFG Launcher V2.exe
+C:\Users\Wayne\Desktop\projects\NFG-Launcher\NFG Launcher V2\obj\Debug\NFG Launcher V2.pdb
+C:\Users\Wayne\Desktop\projects\NFG-Launcher\NFG Launcher V2\bin\Debug\NFG Launcher V2.exe
+C:\Users\Wayne\Desktop\projects\NFG-Launcher\NFG Launcher V2\bin\Debug\NFG Launcher V2.pdb
+C:\Users\Wayne\Desktop\projects\NFG-Launcher\NFG Launcher V2\bin\Debug\MahApps.Metro.dll
+C:\Users\Wayne\Desktop\projects\NFG-Launcher\NFG Launcher V2\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Wayne\Desktop\projects\NFG-Launcher\NFG Launcher V2\bin\Debug\PortableSteam.dll
+C:\Users\Wayne\Desktop\projects\NFG-Launcher\NFG Launcher V2\bin\Debug\Steam.Query.dll
+C:\Users\Wayne\Desktop\projects\NFG-Launcher\NFG Launcher V2\bin\Debug\System.Net.Http.Extensions.dll
+C:\Users\Wayne\Desktop\projects\NFG-Launcher\NFG Launcher V2\bin\Debug\System.Net.Http.Primitives.dll
+C:\Users\Wayne\Desktop\projects\NFG-Launcher\NFG Launcher V2\bin\Debug\System.Windows.Interactivity.dll
+C:\Users\Wayne\Desktop\projects\NFG-Launcher\NFG Launcher V2\bin\Debug\TentacleSoftware.TeamSpeakQuery.dll
+C:\Users\Wayne\Desktop\projects\NFG-Launcher\NFG Launcher V2\bin\Debug\TentacleSoftware.Telnet.dll
+C:\Users\Wayne\Desktop\projects\NFG-Launcher\NFG Launcher V2\bin\Debug\MahApps.Metro.pdb
+C:\Users\Wayne\Desktop\projects\NFG-Launcher\NFG Launcher V2\bin\Debug\MahApps.Metro.xml
+C:\Users\Wayne\Desktop\projects\NFG-Launcher\NFG Launcher V2\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Wayne\Desktop\projects\NFG-Launcher\NFG Launcher V2\bin\Debug\PortableSteam.xml
+C:\Users\Wayne\Desktop\projects\NFG-Launcher\NFG Launcher V2\bin\Debug\System.Net.Http.Extensions.xml
+C:\Users\Wayne\Desktop\projects\NFG-Launcher\NFG Launcher V2\bin\Debug\System.Net.Http.Primitives.xml
+C:\Users\Wayne\Desktop\projects\NFG-Launcher\NFG Launcher V2\obj\Debug\NFG Launcher V2.csproj.App.config
+C:\Users\Wayne\Desktop\projects\NFG-Launcher\NFG Launcher V2\obj\Debug\NFG Launcher V2.csprojResolveAssemblyReference.cache
+C:\Users\Wayne\Desktop\projects\NFG-Launcher\NFG Launcher V2\obj\Debug\Resources\Icons.baml
+C:\Users\Wayne\Desktop\projects\NFG-Launcher\NFG Launcher V2\obj\Debug\Resources\IconsNonShared.baml
+C:\Users\Wayne\Desktop\projects\NFG-Launcher\NFG Launcher V2\obj\Debug\MainWindow.g.cs
+C:\Users\Wayne\Desktop\projects\NFG-Launcher\NFG Launcher V2\obj\Debug\App.g.cs
+C:\Users\Wayne\Desktop\projects\NFG-Launcher\NFG Launcher V2\obj\Debug\NFG Launcher V2_MarkupCompile.cache
+C:\Users\Wayne\Desktop\projects\NFG-Launcher\NFG Launcher V2\obj\Debug\NFG Launcher V2_MarkupCompile.lref
+C:\Users\Wayne\Desktop\projects\NFG-Launcher\NFG Launcher V2\obj\Debug\App.baml
+C:\Users\Wayne\Desktop\projects\NFG-Launcher\NFG Launcher V2\obj\Debug\MainWindow.baml
+C:\Users\Wayne\Desktop\projects\NFG-Launcher\NFG Launcher V2\obj\Debug\NFG Launcher V2.g.resources
+C:\Users\Wayne\Desktop\projects\NFG-Launcher\NFG Launcher V2\obj\Debug\NFG_Launcher_V2.Properties.Resources.resources
+C:\Users\Wayne\Desktop\projects\NFG-Launcher\NFG Launcher V2\obj\Debug\NFG Launcher V2.csproj.GenerateResource.Cache

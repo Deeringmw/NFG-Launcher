@@ -29,7 +29,13 @@ namespace NFG_Launcher_V2
 
 
 
+        private async void Windowloaded (object sender, RoutedEventArgs e)
+        {
+            var serverInfo = await _server.GetServerInfo();
+            MessageBox.Show(serverInfo.Players.ToString());
 
+            //System.Diagnostics.Process.Start("steam://connect/108.61.135.218:26901");
+        }
 
 
         private void btnPlay_Click(object sender, RoutedEventArgs e)
@@ -45,7 +51,8 @@ namespace NFG_Launcher_V2
         private async void btnPlayGrandpa_Click(object sender, RoutedEventArgs e)
         {
             var serverInfo = await _server.GetServerInfo();
-            MessageBox.Show(serverInfo.Players.ToString());
+            var players = serverInfo.Players.ToString();
+            txtGPaPlayer.Text = $"{players} online now!";
 
             //System.Diagnostics.Process.Start("steam://connect/108.61.135.218:26901");
         }

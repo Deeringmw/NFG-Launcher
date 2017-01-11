@@ -69,6 +69,7 @@
                     <Button x:Name="btnGrandpaDonate" Content="Grandpa's Donators" HorizontalAlignment="Left" Margin="125,550,0,0" VerticalAlignment="Top" Width="161" Height="62" Click="btnGrandpaDonate_Click"/>
                     <TextBlock x:Name="textBlock1" HorizontalAlignment="Left" Margin="10,454,0,0" TextWrapping="Wrap" Text="DONORS Get: 2 Base Teleports, 2 Base Protections, 2 Waypoint's  Of  Their Very Own. One Can Be Shared With Friends &amp; The Other Can Only Be Used By The Donor, They Also Get To Travel As Far As 20,000 Anywhere On The Map &amp; Also Get 15 Gimmes. " VerticalAlignment="Top" Height="80" FontSize="14" FontFamily="Georgia"/>
                     <Button x:Name="btnPlayGrandpa" Content="Play Now!" HorizontalAlignment="Left" Margin="452,550,0,0" VerticalAlignment="Top" Width="152" Click="btnPlayGrandpa_Click" Height="62"/>
+                    <TextBox x:Name="txtGPaPlayer" HorizontalAlignment="Left" Height="23" Margin="501,619,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
 
                 </Grid>
             </TabItem>
