@@ -29,12 +29,11 @@ namespace NFG_Launcher_V2
 
 
 
-        private async void Windowloaded (object sender, RoutedEventArgs e)
+        private async void WindowLoaded (object sender, RoutedEventArgs e)
         {
-            var serverInfo = await _server.GetServerInfo();
-            MessageBox.Show(serverInfo.Players.ToString());
+          
 
-            //System.Diagnostics.Process.Start("steam://connect/108.61.135.218:26901");
+          System.Diagnostics.Process.Start("steam://connect/108.61.135.218:26901");
         }
 
 
@@ -52,7 +51,7 @@ namespace NFG_Launcher_V2
         {
             var serverInfo = await _server.GetServerInfo();
             var players = serverInfo.Players.ToString();
-            txtGPaPlayer.Text = $"{players} online now!";
+            MessageBox.Show(players);
 
             //System.Diagnostics.Process.Start("steam://connect/108.61.135.218:26901");
         }
@@ -65,6 +64,21 @@ namespace NFG_Launcher_V2
         private void btnPlayDirty_Click(object sender, RoutedEventArgs e)
         {
             System.Diagnostics.Process.Start("steam://connect/108.61.135.218:29901");
+        }
+
+        private void btnVoteGrandpa_Click(object sender, RoutedEventArgs e)
+        {
+            System.Diagnostics.Process.Start("https://7daystodie-servers.com/server/35620/vote/");
+        }
+
+        private void btnVoteGrandma_Click(object sender, RoutedEventArgs e)
+        {
+            System.Diagnostics.Process.Start("https://7daystodie-servers.com/server/40288/vote/");
+        }
+
+        private void btnVoteDirty_Click(object sender, RoutedEventArgs e)
+        {
+            System.Diagnostics.Process.Start("https://7daystodie-servers.com/server/44773/vote/");
         }
     }
 }

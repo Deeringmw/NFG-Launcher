@@ -6,7 +6,7 @@
         xmlns:Controls="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
         xmlns:local="clr-namespace:NFG_Launcher_V2"
         mc:Ignorable="d"
-        Title="OurSecrets Server Browser" Height="720" Width="900" Icon="/Images\Bite1.png" ResizeMode="NoResize">
+        Title="OurSecrets Server Browser V. Alpha-1.02" Height="720" Width="900" Icon="/Images\Bite1.png" ResizeMode="NoResize">
 
     <Controls:MetroWindow.Resources>
 
@@ -49,7 +49,7 @@
         </Grid.Background>
         <TextBlock Name="tbProgressUpdate" Foreground="White"  Margin="10,632,692,10" />
         <TabControl TabStripPlacement="Left" Grid.Column="0" HorizontalAlignment="Center" Margin="0,10" Width="892">
-            <TabItem Style="{StaticResource MenuItemHeader}">
+            <TabItem Style="{StaticResource MenuItemHeader}" Margin="10,0,-10,0" >
                 <TabItem.HeaderTemplate>
                     <DataTemplate>
                         <DockPanel LastChildFill="True">
@@ -69,11 +69,15 @@
                     <Button x:Name="btnGrandpaDonate" Content="Grandpa's Donators" HorizontalAlignment="Left" Margin="125,550,0,0" VerticalAlignment="Top" Width="161" Height="62" Click="btnGrandpaDonate_Click"/>
                     <TextBlock x:Name="textBlock1" HorizontalAlignment="Left" Margin="10,454,0,0" TextWrapping="Wrap" Text="DONORS Get: 2 Base Teleports, 2 Base Protections, 2 Waypoint's  Of  Their Very Own. One Can Be Shared With Friends &amp; The Other Can Only Be Used By The Donor, They Also Get To Travel As Far As 20,000 Anywhere On The Map &amp; Also Get 15 Gimmes. " VerticalAlignment="Top" Height="80" FontSize="14" FontFamily="Georgia"/>
                     <Button x:Name="btnPlayGrandpa" Content="Play Now!" HorizontalAlignment="Left" Margin="452,550,0,0" VerticalAlignment="Top" Width="152" Click="btnPlayGrandpa_Click" Height="62"/>
-                    <TextBox x:Name="txtGPaPlayer" HorizontalAlignment="Left" Height="23" Margin="501,619,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
+                    <Button x:Name="btnVoteGrandpa" Content="" HorizontalAlignment="Left" Margin="154,10,0,0" VerticalAlignment="Top" Width="347" Height="51" Click="btnVoteGrandpa_Click" FontSize="36" Foreground="White">
+                        <Button.Background>
+                            <ImageBrush ImageSource="Images/banner-35620-1483803446.gif"/>
+                        </Button.Background>
+                    </Button>
 
                 </Grid>
             </TabItem>
-            <TabItem Header="Albums" Style="{StaticResource MenuItemHeader}">
+            <TabItem Header="Albums" Style="{StaticResource MenuItemHeader}" Margin="10,0,-10,0">
                 <TabItem.HeaderTemplate>
                     <DataTemplate>
                         <DockPanel LastChildFill="True">
@@ -90,12 +94,17 @@
                     </DataTemplate>
                 </TabItem.HeaderTemplate>
                 <Grid Margin="-4,0,4,0">
-                      <Button x:Name="btnGrandmaDonators" Content="Grandpa's Donators" HorizontalAlignment="Left" Margin="125,550,0,0" VerticalAlignment="Top" Width="161" Height="62" Click="btnGrandpaDonate_Click"/>
+                    <Button x:Name="btnGrandmaDonators" Content="Grandpa's Donators" HorizontalAlignment="Left" Margin="125,550,0,0" VerticalAlignment="Top" Width="161" Height="62" Click="btnGrandpaDonate_Click"/>
                     <TextBlock x:Name="textBlock2" HorizontalAlignment="Left" Margin="10,454,0,0" TextWrapping="Wrap" Text="DONORS Get: 2 Base Teleports, 2 Base Protections, 2 Waypoint's  Of  Their Very Own. One Can Be Shared With Friends &amp; The Other Can Only Be Used By The Donor, They Also Get To Travel As Far As 20,000 Anywhere On The Map &amp; Also Get 15 Gimmes. " VerticalAlignment="Top" Height="80" FontSize="14" FontFamily="Georgia"/>
                     <Button x:Name="btnPlayGrandma" Content="Play Now!" HorizontalAlignment="Left" Margin="452,550,0,0" VerticalAlignment="Top" Width="152" Click="btnPlayGrandmas_Click" Height="62"/>
+                    <Button x:Name="btnVoteGrandma" Content="" HorizontalAlignment="Left" Margin="154,10,0,0" VerticalAlignment="Top" Width="347" Height="51" FontSize="36" Foreground="White" Click="btnVoteGrandma_Click">
+                        <Button.Background>
+                            <ImageBrush ImageSource="Images/banner-35620-1483803446.gif"/>
+                        </Button.Background>
+                    </Button>
                 </Grid>
             </TabItem>
-            <TabItem x:Name ="tabInsurgency" Header="Insurgency" Style="{StaticResource MenuItemHeader}">
+            <TabItem x:Name ="tabInsurgency" Header="Insurgency" Style="{StaticResource MenuItemHeader}" Margin="10,2,-10,-2">
                 <TabItem.HeaderTemplate>
                     <DataTemplate>
                         <DockPanel LastChildFill="True">
@@ -116,6 +125,11 @@
                     <Button x:Name="btnDirtyDonetors" Content="Grandpa's Donators" HorizontalAlignment="Left" Margin="125,550,0,0" VerticalAlignment="Top" Width="161" Height="62" Click="btnGrandpaDonate_Click"/>
                     <TextBlock x:Name="textBlock3" HorizontalAlignment="Left" Margin="10,454,0,0" TextWrapping="Wrap" Text="DONORS Get: 2 Base Teleports, 2 Base Protections, 2 Waypoint's  Of  Their Very Own. One Can Be Shared With Friends &amp; The Other Can Only Be Used By The Donor, They Also Get To Travel As Far As 20,000 Anywhere On The Map &amp; Also Get 15 Gimmes. " VerticalAlignment="Top" Height="80" FontSize="14" FontFamily="Georgia"/>
                     <Button x:Name="btnPlayDirty" Content="Play Now!" HorizontalAlignment="Left" Margin="452,550,0,0" VerticalAlignment="Top" Width="152" Click="btnPlayDirty_Click" Height="62"/>
+                    <Button x:Name="btnVoteDirty" Content="" HorizontalAlignment="Left" Margin="154,10,0,0" VerticalAlignment="Top" Width="347" Height="51" FontSize="36" Foreground="White" Click="btnVoteDirty_Click">
+                        <Button.Background>
+                            <ImageBrush ImageSource="Images/banner-35620-1483803446.gif"/>
+                        </Button.Background>
+                    </Button>
                 </Grid>
             </TabItem>
         </TabControl>
