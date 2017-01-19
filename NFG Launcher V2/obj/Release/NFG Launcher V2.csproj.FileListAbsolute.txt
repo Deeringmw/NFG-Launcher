@@ -20,3 +20,36 @@ C:\Users\Mdeering\documents\visual studio 2015\Projects\NFG Launcher V2\NFG Laun
 C:\Users\Mdeering\documents\visual studio 2015\Projects\NFG Launcher V2\NFG Launcher V2\obj\Release\NFG Launcher V2.csproj.GenerateResource.Cache
 C:\Users\Mdeering\documents\visual studio 2015\Projects\NFG Launcher V2\NFG Launcher V2\obj\Release\NFG Launcher V2.exe
 C:\Users\Mdeering\documents\visual studio 2015\Projects\NFG Launcher V2\NFG Launcher V2\obj\Release\NFG Launcher V2.pdb
+C:\Users\stick\Documents\Visual Studio 2015\Projects\NFG Launcher V2\NFG Launcher V2\bin\Release\NFG Launcher V2.exe.config
+C:\Users\stick\Documents\Visual Studio 2015\Projects\NFG Launcher V2\NFG Launcher V2\obj\Release\NFG Launcher V2.exe
+C:\Users\stick\Documents\Visual Studio 2015\Projects\NFG Launcher V2\NFG Launcher V2\obj\Release\NFG Launcher V2.pdb
+C:\Users\stick\Documents\Visual Studio 2015\Projects\NFG Launcher V2\NFG Launcher V2\obj\Release\NFG Launcher V2.csproj.App.config
+C:\Users\stick\Documents\Visual Studio 2015\Projects\NFG Launcher V2\NFG Launcher V2\obj\Release\NFG Launcher V2.csprojResolveAssemblyReference.cache
+C:\Users\stick\Documents\Visual Studio 2015\Projects\NFG Launcher V2\NFG Launcher V2\obj\Release\Resources\Icons.baml
+C:\Users\stick\Documents\Visual Studio 2015\Projects\NFG Launcher V2\NFG Launcher V2\obj\Release\Resources\IconsNonShared.baml
+C:\Users\stick\Documents\Visual Studio 2015\Projects\NFG Launcher V2\NFG Launcher V2\obj\Release\MainWindow.g.cs
+C:\Users\stick\Documents\Visual Studio 2015\Projects\NFG Launcher V2\NFG Launcher V2\obj\Release\App.g.cs
+C:\Users\stick\Documents\Visual Studio 2015\Projects\NFG Launcher V2\NFG Launcher V2\obj\Release\NFG Launcher V2_MarkupCompile.cache
+C:\Users\stick\Documents\Visual Studio 2015\Projects\NFG Launcher V2\NFG Launcher V2\obj\Release\NFG Launcher V2_MarkupCompile.lref
+C:\Users\stick\Documents\Visual Studio 2015\Projects\NFG Launcher V2\NFG Launcher V2\obj\Release\App.baml
+C:\Users\stick\Documents\Visual Studio 2015\Projects\NFG Launcher V2\NFG Launcher V2\obj\Release\MainWindow.baml
+C:\Users\stick\Documents\Visual Studio 2015\Projects\NFG Launcher V2\NFG Launcher V2\obj\Release\NFG Launcher V2.g.resources
+C:\Users\stick\Documents\Visual Studio 2015\Projects\NFG Launcher V2\NFG Launcher V2\bin\Release\NFG Launcher V2.exe
+C:\Users\stick\Documents\Visual Studio 2015\Projects\NFG Launcher V2\NFG Launcher V2\bin\Release\NFG Launcher V2.pdb
+C:\Users\stick\Documents\Visual Studio 2015\Projects\NFG Launcher V2\NFG Launcher V2\bin\Release\MahApps.Metro.dll
+C:\Users\stick\Documents\Visual Studio 2015\Projects\NFG Launcher V2\NFG Launcher V2\bin\Release\Newtonsoft.Json.dll
+C:\Users\stick\Documents\Visual Studio 2015\Projects\NFG Launcher V2\NFG Launcher V2\bin\Release\PortableSteam.dll
+C:\Users\stick\Documents\Visual Studio 2015\Projects\NFG Launcher V2\NFG Launcher V2\bin\Release\Steam.Query.dll
+C:\Users\stick\Documents\Visual Studio 2015\Projects\NFG Launcher V2\NFG Launcher V2\bin\Release\System.Net.Http.Extensions.dll
+C:\Users\stick\Documents\Visual Studio 2015\Projects\NFG Launcher V2\NFG Launcher V2\bin\Release\System.Net.Http.Primitives.dll
+C:\Users\stick\Documents\Visual Studio 2015\Projects\NFG Launcher V2\NFG Launcher V2\bin\Release\System.Windows.Interactivity.dll
+C:\Users\stick\Documents\Visual Studio 2015\Projects\NFG Launcher V2\NFG Launcher V2\bin\Release\TentacleSoftware.TeamSpeakQuery.dll
+C:\Users\stick\Documents\Visual Studio 2015\Projects\NFG Launcher V2\NFG Launcher V2\bin\Release\TentacleSoftware.Telnet.dll
+C:\Users\stick\Documents\Visual Studio 2015\Projects\NFG Launcher V2\NFG Launcher V2\bin\Release\MahApps.Metro.pdb
+C:\Users\stick\Documents\Visual Studio 2015\Projects\NFG Launcher V2\NFG Launcher V2\bin\Release\MahApps.Metro.xml
+C:\Users\stick\Documents\Visual Studio 2015\Projects\NFG Launcher V2\NFG Launcher V2\bin\Release\Newtonsoft.Json.xml
+C:\Users\stick\Documents\Visual Studio 2015\Projects\NFG Launcher V2\NFG Launcher V2\bin\Release\PortableSteam.xml
+C:\Users\stick\Documents\Visual Studio 2015\Projects\NFG Launcher V2\NFG Launcher V2\bin\Release\System.Net.Http.Extensions.xml
+C:\Users\stick\Documents\Visual Studio 2015\Projects\NFG Launcher V2\NFG Launcher V2\bin\Release\System.Net.Http.Primitives.xml
+C:\Users\stick\Documents\Visual Studio 2015\Projects\NFG Launcher V2\NFG Launcher V2\obj\Release\NFG_Launcher_V2.Properties.Resources.resources
+C:\Users\stick\Documents\Visual Studio 2015\Projects\NFG Launcher V2\NFG Launcher V2\obj\Release\NFG Launcher V2.csproj.GenerateResource.Cache

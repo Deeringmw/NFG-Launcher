@@ -53,7 +53,6 @@ C:\Users\stick\Documents\Visual Studio 2015\Projects\NFG Launcher V2\NFG Launche
 C:\Users\stick\Documents\Visual Studio 2015\Projects\NFG Launcher V2\NFG Launcher V2\obj\Debug\NFG Launcher V2.exe
 C:\Users\stick\Documents\Visual Studio 2015\Projects\NFG Launcher V2\NFG Launcher V2\obj\Debug\NFG Launcher V2.pdb
 C:\Users\stick\Documents\Visual Studio 2015\Projects\NFG Launcher V2\NFG Launcher V2\bin\Debug\Steam.Query.dll
-C:\Users\stick\Documents\Visual Studio 2015\Projects\NFG Launcher V2\NFG Launcher V2\obj\Debug\NFG Launcher V2.csprojResolveAssemblyReference.cache
 C:\Users\Wayne\Desktop\projects\NFG-Launcher\NFG Launcher V2\bin\Debug\NFG Launcher V2.exe.config
 C:\Users\Wayne\Desktop\projects\NFG-Launcher\NFG Launcher V2\obj\Debug\NFG Launcher V2.exe
 C:\Users\Wayne\Desktop\projects\NFG-Launcher\NFG Launcher V2\obj\Debug\NFG Launcher V2.pdb

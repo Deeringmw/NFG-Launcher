@@ -29,12 +29,7 @@ namespace NFG_Launcher_V2
 
 
 
-        private async void WindowLoaded (object sender, RoutedEventArgs e)
-        {
-          
 
-          System.Diagnostics.Process.Start("steam://connect/108.61.135.218:26901");
-        }
 
 
         private void btnPlay_Click(object sender, RoutedEventArgs e)
@@ -49,11 +44,9 @@ namespace NFG_Launcher_V2
 
         private async void btnPlayGrandpa_Click(object sender, RoutedEventArgs e)
         {
-            var serverInfo = await _server.GetServerInfo();
-            var players = serverInfo.Players.ToString();
-            MessageBox.Show(players);
 
-            //System.Diagnostics.Process.Start("steam://connect/108.61.135.218:26901");
+
+            System.Diagnostics.Process.Start("steam://connect/108.61.135.218:26901");
         }
 
         private void btnPlayGrandmas_Click(object sender, RoutedEventArgs e)
